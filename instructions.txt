@@ -1,0 +1,34 @@
+- Create a new react application using create-react-app
+	- npx create-react-app react-intro
+- Create a new variable in App.js called sampleMovies
+- Copy/paste the json data from this github gist into sampleMovies
+- https://gist.github.com/saniyusuf/406b843afdfb9c6a86e25753fe2761f4
+- Create a new react component called <MovieInfo/>
+	- The return statement of <MovieInfo /> should include one enclosing <div> tag
+	- const MovieInfo = () => {
+			return (
+				<div>
+				</div>
+			)
+		}
+- Add one instance of the <MovieInfo/> component into the JSX of <App/> 
+- Pass in sampleMovies[0] as a prop called movie to the <MovieInfo/> component
+	- <MovieInfo movie={sampleMovies[0]}/>
+- Add the props parameter into the <MovieInfo /> function definition
+	- const MovieInfo = (props) => {
+			return (
+				<div>
+				</div>
+			)
+		}
+- Display the title of the movie passed through the <MovieInfo /> component props in the JSX of <MovieInfo /> in an <h1> tag
+	- const MovieInfo = (props) => {
+			return (
+				<div>
+					<h1>Title: {props.movie.title}<h1>
+				</div>
+			)
+		}
+- Display the following movie fields in the JSX of <MovieInfo /> under the title. These fields can be displayed with the <p> instead of the <h1> tag.
+	- Year, Rated, Director, Writer, Actors, Plot, imdbRating
+- [Optional] Add css to the <div> and <p> tags to style the JSX of <MovieInfo />
